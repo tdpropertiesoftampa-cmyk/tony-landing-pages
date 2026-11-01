@@ -37,7 +37,7 @@ On GitHub: open the `assets` folder, click **Add file**, then **Upload files**, 
 2. Replace each `https://REPLACE-ME.example.com/...` with the form URL from your CRM or form service (one per page: `flip`, `land`, `build`, `asis`).
 3. Save and commit.
 
-Each submission sends these fields: `first_name`, `email`, `phone`, `consent`, `lead_magnet`, `source`, and `page_url`. Your service must accept a cross-origin POST (CORS) and answer with a success status. Until you replace the placeholders, the form shows the friendly error with Tony's phone number instead of the thank-you message.
+Each submission sends these fields: `first_name`, `email`, `phone`, `consent`, `lead_magnet`, `tag`, `source`, and `page_url`. If you use a Zapier Catch Hook, the page sends the lead without waiting for a reply (Zapier does not send one browsers can read), so it shows the thank-you message once the request is sent. Your service must accept a cross-origin POST (CORS) and answer with a success status. Until you replace the placeholders, the form shows the friendly error with Tony's phone number instead of the thank-you message.
 
 The pages say the download is on its way, so set up an automatic email or text that delivers the checklist when a lead comes in. The checklists themselves are not in this repo yet.
 
