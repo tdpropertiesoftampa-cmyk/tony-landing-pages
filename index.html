@@ -3,17 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Landing Pages | Tony Damiano</title>
+<title>Free Real Estate Checklists | Tony Damiano, eXp Realty</title>
+<meta name="description" content="Free checklists for Tampa Bay flips, land deals, new construction buyers, and sellers of homes that need work, from Tony Damiano, REALTOR with eXp Realty.">
+<meta name="theme-color" content="#0F2A3F">
+<link rel="canonical" href="https://go.tonyinvestorfriendly.com/">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Free Real Estate Checklists by Tony Damiano",
+  "url": "https://go.tonyinvestorfriendly.com/",
+  "publisher": {
+    "@type": "Person",
+    "name": "Tony Damiano",
+    "url": "https://go.tonyinvestorfriendly.com/about.html"
+  }
+}</script>
 </head>
 <body>
-<header class="hero"><div class="wrap"><p class="eyebrow">Internal use</p><h1>Landing pages</h1><p class="sub">Links to the four lead magnet pages. Add ?src=instagram (or any label) to track where leads come from.</p></div></header>
-<main><section><div class="wrap"><ul class="links">
-<li><a href="flip.html">Flip Deal Checklist<span>For fix-and-flip investors: flip.html</span></a></li>
-<li><a href="land.html">Land Deal Checklist<span>For investors and builders: land.html</span></a></li>
-<li><a href="build.html">New Construction Buyer List<span>For new construction buyers: build.html</span></a></li>
-<li><a href="as-is.html">As-Is Seller Prep Guide<span>For sellers of homes that need work: as-is.html</span></a></li>
-</ul></div></section></main>
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <img class="topbar-logo" src="assets/logo-toplisting-exp.png" alt="TopListing Group and eXp Realty logo" width="147" height="48">
+    <p class="topbar-name"><strong>Tony Damiano, REALTOR</strong><span>eXp Realty (TopListing Group)</span></p>
+    <a class="topbar-call" href="tel:+18133457487">Call 813-345-7487</a>
+  </div>
+</div>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Free for Tampa Bay investors, buyers, and sellers</p>
+    <h1>Free real estate checklists from Tony Damiano</h1>
+    <p class="sub">Pick the checklist that fits your situation. Each one is free and arrives by email in minutes.</p>
+  </div>
+</header>
+<main>
+  <section aria-labelledby="pick-h">
+    <div class="wrap">
+      <h2 id="pick-h">Choose your free checklist</h2>
+      <ul class="picks">
+      <li><a class="pick" href="flip.html" data-page="flip.html"><strong>Flip Deal Checklist</strong><em>For fix-and-flip investors</em><span>Run every flip through the same list: ARV, repairs, costs, exit plan, and red flags.</span><b>Get the free checklist</b></a></li>
+      <li><a class="pick" href="land.html" data-page="land.html"><strong>Land Deal Checklist</strong><em>For investors and builders</em><span>Zoning, utilities, lot splits, teardowns, survey, and flood zone questions for a lot.</span><b>Get the free checklist</b></a></li>
+      <li><a class="pick" href="build.html" data-page="build.html"><strong>New Construction Buyer List</strong><em>For new construction buyers</em><span>What to ask the builder, what to check in the contract, and what to inspect during the build.</span><b>Get the free checklist</b></a></li>
+      <li><a class="pick" href="as-is.html" data-page="as-is.html"><strong>As-Is Seller Prep Guide</strong><em>For sellers of homes that need work</em><span>Your options, what to fix or leave, disclosure basics, and how to compare offers.</span><b>Get the free checklist</b></a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="about" aria-labelledby="who-h">
+    <div class="wrap">
+      <h2 id="who-h">Who is Tony?</h2>
+      <p>Tony Damiano is a licensed Florida REALTOR with eXp Realty. He has invested in Tampa Bay real estate for 16 years and manages new construction projects. He helps investors, buyers, and sellers in Hillsborough, Pasco, Pinellas, Hernando, and Polk counties.</p>
+      <p><a href="about.html">About Tony</a> | <a href="faq.html">Common questions</a> | <a href="https://www.youtube.com/@tonyinvestorfriendlyrealto">YouTube</a></p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <img class="logo" src="assets/logo-white.png" width="220" height="77" alt="TopListing Group and eXp Realty logo" loading="lazy">
+    <p>Tony Damiano, REALTOR. eXp Realty (TopListing Group). Florida License SL3542002.</p>
+    <p><a href="index.html">Home</a> | <a href="about.html">About Tony</a> | <a href="faq.html">FAQ</a></p>
+    <p>The content on this page is general education only. It is not legal, tax, or financial advice. Talk with a qualified professional about your situation.</p>
+    <p>Equal Housing Opportunity.</p>
+  </div>
+</footer>
+<script>
+// Pass the lead source (for example ?src=instagram) on to the checklist pages.
+(function () {
+  try {
+    var src = new URLSearchParams(window.location.search).get("src");
+    if (!src) return;
+    var links = document.querySelectorAll("a.pick");
+    for (var i = 0; i < links.length; i++) {
+      links[i].href = links[i].getAttribute("data-page") + "?src=" + encodeURIComponent(src.slice(0, 60));
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
