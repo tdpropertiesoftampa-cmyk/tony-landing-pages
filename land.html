@@ -68,6 +68,7 @@
               <label for="consent">I agree that Tony Damiano of eXp Realty may contact me by email, and by call or text if I give a phone number, about this download and Tampa Bay real estate. Message and data rates may apply.</label>
             </div>
             <input type="hidden" name="lead_magnet" value="Land Deal Checklist">
+            <input type="hidden" name="tag" value="land-checklist">
             <input type="hidden" id="source" name="source" value="direct">
             <div class="hp" aria-hidden="true">
               <label for="company">Leave this field empty</label>
@@ -153,9 +154,16 @@
     var label = btn.textContent;
     btn.textContent = "Sending...";
 
-    fetch(endpoint, { method: "POST", body: data, headers: { "Accept": "application/json" } })
+    // Zapier catch hooks do not send browser-readable replies, so use no-cors for them.
+    // In that case a sent request counts as success; only network failures show the error.
+    var isZapier = endpoint.indexOf("hooks.zapier.com") !== -1;
+    var opts = { method: "POST", body: new URLSearchParams(data) };
+    if (isZapier) opts.mode = "no-cors";
+    else opts.headers = { "Accept": "application/json" };
+
+    fetch(endpoint, opts)
       .then(function (res) {
-        if (!res.ok) throw new Error("Bad response");
+        if (!isZapier && !res.ok) throw new Error("Bad response");
         document.getElementById("thanks-name").textContent = form.first_name.value.trim() || "friend";
         area.hidden = true;
         thanks.hidden = false;
