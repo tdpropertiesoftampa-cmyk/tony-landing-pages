@@ -47,3 +47,7 @@ The pages say the download is on its way, so set up an automatic email or text t
 2. In **Settings, Pages, Custom domain**, enter it and save. GitHub adds a `CNAME` file for you.
 3. At your domain provider, add the DNS record GitHub shows. For a subdomain, add a `CNAME` record pointing to `YOUR-USERNAME.github.io`. For a root domain, add the `A` records listed in GitHub's Pages help.
 4. Back in Pages, tick **Enforce HTTPS** once it becomes available.
+
+## Checklist PDFs
+
+The four checklist PDFs live in the `d` folder, inside a folder with a long random name. The link is not listed anywhere and `robots.txt` asks search engines to skip it, but anyone who has a link can open the file. To update a checklist, upload a new PDF with the same file name to that folder on GitHub.
