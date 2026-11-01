@@ -4,5 +4,5 @@ window.FORM_ENDPOINTS = {
   flip: "https://hooks.zapier.com/hooks/catch/27811518/49skhd2/",
   land: "https://hooks.zapier.com/hooks/catch/27811518/49sf5lh/",
   build: "https://hooks.zapier.com/hooks/catch/27811518/49sfwan/",
-  asis: "https://REPLACE-ME.example.com/asis"
+  asis: "https://hooks.zapier.com/hooks/catch/27811518/49saeca/"
 };
