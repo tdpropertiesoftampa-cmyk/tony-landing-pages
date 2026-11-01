@@ -29,6 +29,15 @@ a:hover { color: var(--gold-dark); }
 .skip { position: absolute; left: -999px; top: 0; background: var(--white); color: var(--navy); padding: 10px 14px; z-index: 10; }
 .skip:focus { left: 8px; top: 8px; }
 
+/* Top bar: agent name and eXp logo above the fold */
+.topbar { background: var(--white); border-bottom: 3px solid var(--gold); padding: 10px 0; }
+.topbar-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.topbar-logo { height: 40px; width: auto; max-width: 150px; object-fit: contain; }
+.topbar-name { margin: 0; line-height: 1.25; flex: 1 1 160px; color: var(--navy); }
+.topbar-name strong { display: block; }
+.topbar-name span { font-size: .85rem; color: #4B5A68; }
+.topbar-call { font-weight: 700; color: var(--navy); white-space: nowrap; }
+
 /* Hero */
 .hero { background: var(--navy); color: var(--white); padding: 40px 0 48px; }
 .eyebrow { margin: 0 0 12px; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
