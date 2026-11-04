@@ -115,3 +115,16 @@ footer p { margin: 0 0 10px; }
   .about-grid { grid-template-columns: 160px 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* Home page checklist picker, FAQ, and about pages */
+.picks { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.pick { display: block; padding: 18px; border: 2px solid var(--gray-line); border-radius: var(--radius); background: var(--white); text-decoration: none; color: var(--text); }
+.pick:hover { border-color: var(--gold); }
+.pick strong { display: block; font-size: 1.2rem; color: var(--navy); }
+.pick em { display: block; color: var(--gold-dark); font-style: normal; font-weight: 600; margin: 2px 0 8px; }
+.pick span { display: block; margin-bottom: 12px; }
+.pick b { display: inline-block; background: var(--gold); color: var(--navy-dark); padding: 10px 16px; border-radius: 8px; }
+.faq h3 { margin: 22px 0 6px; font-size: 1.15rem; color: var(--navy); }
+.faq p { margin: 0 0 8px; }
+.about ul { padding-left: 20px; }
+@media (min-width: 640px) { .picks { grid-template-columns: 1fr 1fr; } }
